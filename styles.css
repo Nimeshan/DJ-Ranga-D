@@ -1,0 +1,378 @@
+.cardbox {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%; /* Ensures all cards take full height */
+    padding: 20px;
+    background: #6040ce; /* Purple by default for consistency */
+    border-radius: 8px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease;
+    min-height: 450px;
+}
+
+.cardbox.bg-dark {
+    background: #2c2c2c; /* Dark background override for specific cards */
+}
+
+.cardbox img {
+    max-width: 80px; /* Consistent icon size */
+    margin: 0 auto 15px auto; /* Center the image */
+}
+
+.cardbox h5 {
+    text-align: center;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.cardbox p {
+    flex-grow: 1;
+    text-align: left;
+    font-size: 0.95rem;
+}
+
+.cardbox:hover {
+    box-shadow: 10px 10px 20px rgba(236, 235, 235, 0.5);
+}
+
+.cardbox-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Ensures two cards per row */
+    gap: 20px; /* Spacing between cards */
+}
+
+/* Footer Styling */
+.footer {
+    background-color: #210036;
+    color: white;
+    padding: 27px 0;
+}
+
+/* Align Columns Properly */
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+/* Icon Circle */
+.icon-circle {
+    width: 40px;
+    height: 40px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6a0dad;
+    font-size: 18px;
+}
+
+/* Contact Items */
+.contact-item {
+    display: flex;
+    align-items: center;
+}
+
+/* Add spacing between icon and text */
+.contact-item span {
+    font-size: 16px;
+    color: white;
+}
+
+.footer .contact-item .icon-circle {
+    margin-right: 10px;
+}
+
+.footer-title {
+    margin-top: 60px; /* Adjust spacing from the top */
+    text-align: left; /* Left-align the title */
+    color: white;
+    font-size: 1.5rem; /* Adjust font size */
+    margin-bottom: 20px; /* Add space between title and links */
+}
+
+.footer-links {
+    list-style-type: none; /* Remove bullet points */
+    padding-left: 0; /* Remove default list padding */
+    margin: 0; /* Remove default list margin */
+    text-align: left; /* Align links to the left */
+}
+
+.footer-links li {
+    padding-left: 5px; /* Optional: Add slight padding for alignment */
+}
+
+.footer-links a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set link color */
+    font-size: 1rem; /* Adjust font size */
+    display: inline-block; /* Prevent wrapping issues */
+    transition: color 0.3s ease; /* Smooth hover transition */
+}
+
+.footer-links a:hover {
+    color: #6040ce; /* Change color on hover */
+}
+
+.responsive-img {
+    width: 610px;
+    height: auto;
+    border-radius: 5px;
+  }
+
+  .responsive-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: black;
+    color: white;
+    padding: 1rem;
+  }
+
+  .text-container h1 {
+    font-size: 3.8rem; /* Default for larger screens */
+  }
+
+  .text-container h3 {
+    font-size: 1.2rem; /* Default for larger screens */
+  }
+
+  .btn {
+    font-size: 1rem; /* Default for larger screens */
+    padding: 0.5rem 1.5rem;
+  }
+
+  /* Tablet adjustments */
+  @media (max-width: 768px) {
+    .responsive-container {
+      padding: 0.7rem;
+    }
+
+    .responsive-img {
+      width: 50%; /* Reduce image size for tablets */
+    }
+
+    .text-container h1 {
+      font-size: 1.8rem;
+    }
+
+    .text-container h3 {
+      font-size: 1rem;
+    }
+
+    .btn {
+      font-size: 0.9rem;
+      padding: 0.4rem 1.2rem;
+    }
+  }
+
+  /* Mobile adjustments */
+  @media (max-width: 480px) {
+    .responsive-container {
+      flex-direction: column; /* Stack items vertically */
+      text-align: center;
+    }
+
+    .responsive-img {
+      width: 70%; /* Smaller image for mobile */
+      margin-top: 1rem; /* Add spacing between text and image */
+    }
+
+    .text-container h1 {
+      font-size: 1.7rem; /* Smaller font size */
+    }
+
+    .text-container h3 {
+      font-size: 0.9rem;
+    }
+
+    .btn {
+      font-size: 0.8rem;
+      padding: 0.3rem 1rem;
+    }
+  }
+
+  .footer-brand {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+   /* Custom styles */
+   .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .hamburger-icon {
+    cursor: pointer;
+    display: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+      flex-direction: column;
+      background-color: black;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      width: 100%;
+      padding: 1rem 0;
+      z-index: 1000;
+    }
+
+    .nav-links.active {
+      display: flex;
+    }
+
+    .nav-item {
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+
+    .hamburger-icon {
+      display: block;
+    }
+  }
+
+  @media (max-width: 992px) { /* Tablets and below */
+    .carousel-item .card-img-top {
+        height: 220px !important; /* Reduce image height */
+    }
+    .col-lg-4 {
+        width: 94% !important; /* Make each card take full width */
+        max-width: 80%; /* Reduce width slightly for better spacing */
+        margin: 0 auto; /* Center align */
+    }
+}
+
+@media (max-width: 576px) { /* Mobile screens */
+    .carousel-item .card-img-top {
+        height: 150px !important; /* Further reduce image height */
+    }
+    .col-lg-4 {
+        max-width: 90%; /* Further reduce width for better spacing */
+    }
+}
+
+/* Add space between image and cards in Mobile & Tablet */
+@media (max-width: 992px) { /* Tablets and below */
+    .image-spacing {
+        margin-bottom: 20px; /* Adds spacing between image and cards */
+    }
+}
+
+/* Ensure cards stack properly on Mobile */
+@media (max-width: 768px) { /* Mobile screens */
+    .cardbox-container {
+        display: flex;
+        flex-direction: column;
+        gap: 12px; /* Adds space between cards */
+    }
+}
+
+
+/* Ensure spacing between DJRangaD and email/text */
+@media (max-width: 992px) { /* Tablets and below */
+    .footer-brand {
+        margin-bottom: 15px; /* Space below DJRangaD */
+    }
+    .contact-item {
+        margin-bottom: 10px; /* Add space between phone and email */
+    }
+}
+
+/* Ensure proper center alignment on Mobile */
+@media (max-width: 576px) { /* Mobile screens */
+    .footer .row {
+        text-align: center;
+    }
+    .contact-item {
+        justify-content: center; /* Center text & icons */
+    }
+    .col-md-4 {
+        align-items: center !important; /* Center columns */
+    }
+    .footer-links {
+        padding: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer .row {
+        text-align: center; /* Center align on mobile */
+    }
+
+    .footer .col-12 {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Center items */
+        margin-bottom: 20px;
+    }
+}
+
+.container {
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.map-section {
+  background: #111;
+  padding: 60px 0;
+}
+.map-container {
+  width: 100%;
+  max-width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+iframe {
+  display: block;
+  width: 100%;
+  height: 450px;
+  border: none;
+}
+
+
+.row {
+    margin-right: 0 !important;
+    margin-left: 0 !important;
+}
+
+.col-lg-6 {
+    padding-right: 0 !important; /* Remove extra padding */
+}
+
+.contact-section {
+  background: #111;
+  color: white;
+}
+.contact-info, .contact-form {
+  background: #222;
+  border-radius: 8px;
+}
+.contact-form input, .contact-form textarea {
+  background: #333;
+  color: white;
+  border: none;
+}
+.contact-form input::placeholder, 
+.contact-form textarea::placeholder {
+  color: #bbb;
+}
+.contact-form button {
+  background: #220c36;
+  border: none;
+  font-weight: bold;
+}
+.contact-form button:hover {
+  background: #541f86;
+}
+
